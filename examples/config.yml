@@ -1,0 +1,19 @@
+# VK group token with messages access
+vk_token: "vk1.a.ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-xyz"
+
+# Templates for actions that can be used in sections for button actions
+# Available colors for VK keyboard buttons: negative, positive, primary, secondary
+action_templates:
+  # An example of back action
+  back:
+    label: "Back"
+    color: negative
+    section: __back # magic name for returning to previous section
+  to_start:
+    label: "Main Menu"
+    color: negative
+    section: start # "start" is always the default section
+  guide:
+    label: "Guide"
+    color: primary
+    section: "{current}_guide" # {current} is being replaced with ID of current section

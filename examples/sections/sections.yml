@@ -1,0 +1,48 @@
+# Available button colors: primary, secondary, negative
+
+# start is always the default section
+start:
+  text: |
+    Hello!
+    We have buttons here!
+  actions:
+    - label: "Section 1"
+      color: primary
+      section: section1
+    - label: "Section 2"
+      color: secondary
+      section: section2
+
+section1:
+  text: |
+    Section 1!
+  actions:
+    - label: "Subsection 1"
+      color: primary
+      section: subsection1
+    - template: guide
+      color: secondary # We can replace keys from template
+    - template: back
+
+section1_guide:
+  text: |
+    Section 1 Guide
+  actions:
+    - template: back
+
+subsection1:
+  text: |
+    Subsection 1!
+  actions:
+    - label: "Section 2"
+      color: primary
+      section: section2
+    - template: to_start
+    - template: back
+
+section2:
+  text: |
+    Section 2!
+  actions:
+    - template: to_start
+    - template: back
